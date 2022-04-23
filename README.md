@@ -4,9 +4,18 @@ LibLab Assessment SDK written using JavaScript.
 
 ## Set up the project
 
-```
-npm install
-```
+- Create a .env file and paste the following data into it
+
+  ```
+  NODE_ENV=development
+  PORT=8000
+  TOKEN=paste-your-Lord-of-the-Rings-API-token-here
+  ```
+
+- Install the dependencies
+  ```
+  npm install
+  ```
 
 ## Run the project
 
