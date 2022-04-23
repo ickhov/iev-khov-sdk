@@ -5,7 +5,7 @@ export default fp((fastify, opts, done) => {
   const yupOptions = {
     strict: false,
     abortEarly: false, // return all errors
-    stripUnknown: true, // remove additional properties
+    stripUnknown: false,
     recursive: true,
   };
 
