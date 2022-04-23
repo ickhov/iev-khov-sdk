@@ -1,0 +1,45 @@
+{
+  "name": "iev-khov-sdk",
+  "version": "1.0.0",
+  "description": "LibLab Assessment SDK written using JavaScript.",
+  "main": "server.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ickhov/iev-khov-sdk.git"
+  },
+  "author": "Iev Khov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ickhov/iev-khov-sdk/issues"
+  },
+  "homepage": "https://github.com/ickhov/iev-khov-sdk#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "mocha": "^9.2.1",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "close-with-grace": "^1.1.0",
+    "dotenv": "^16.0.0",
+    "eslint-config-prettier": "^8.4.0",
+    "fastify": "^3.27.2",
+    "fastify-autoload": "^3.11.0",
+    "fastify-cors": "^6.0.3",
+    "fastify-formbody": "^5.2.0",
+    "fastify-multipart": "^5.3.1",
+    "fastify-plugin": "^3.0.1",
+    "yup": "^0.32.11"
+  }
+}
