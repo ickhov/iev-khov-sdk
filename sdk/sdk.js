@@ -52,6 +52,12 @@ const SDK = {
     if (id) url = `${url}/${id}`;
     return helper({ requireToken: true, token, url });
   },
+  chapter: async (id) => {
+    let url = urls.chapter;
+    // append the id if any
+    if (id) url = `${url}/${id}`;
+    return helper({ requireToken: true, token, url });
+  },
 };
 
 export default SDK;

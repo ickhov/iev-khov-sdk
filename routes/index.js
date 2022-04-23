@@ -4,6 +4,7 @@ import bookAPI from './book.js';
 import characterAPI from './character.js';
 import movieAPI from './movie.js';
 import quoteAPI from './quote.js';
+import chapterAPI from './chapter.js';
 import ping from './ping.js';
 import root from './root.js';
 
@@ -11,6 +12,7 @@ const { book, bookChapters } = bookAPI;
 const { movie, movieQuotes } = movieAPI;
 const { character, characterQuotes } = characterAPI;
 const { quote } = quoteAPI;
+const { chapter } = chapterAPI;
 
 SDK.initialize({ token: process.env.TOKEN });
 
@@ -51,5 +53,10 @@ export default async (fastify) => {
   fastify.get('/quote', (request, reply) => quote(fastify, request, reply));
   fastify.get('/quote/:id', { schema }, (request, reply) =>
     quote(fastify, request, reply)
+  );
+  // CHAPTER API
+  fastify.get('/chapter', (request, reply) => chapter(fastify, request, reply));
+  fastify.get('/chapter/:id', { schema }, (request, reply) =>
+    chapter(fastify, request, reply)
   );
 };
