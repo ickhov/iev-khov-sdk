@@ -34,7 +34,17 @@ const SDK = {
       // append quote url if needed
       if (isQuote) url = `${url}/quote`;
     }
-    return helper({ token, url });
+    return helper({ requireToken: true, token, url });
+  },
+  character: async (id, isQuote) => {
+    let url = urls.character;
+    // append the id if any
+    if (id) {
+      url = `${url}/${id}`;
+      // append quote url if needed
+      if (isQuote) url = `${url}/quote`;
+    }
+    return helper({ requireToken: true, token, url });
   },
 };
 

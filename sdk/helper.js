@@ -1,11 +1,9 @@
 import axios from 'axios';
 
-const helper = async (
-  { requireToken, token, url } = { requireToken: true }
-) => {
+const helper = async ({ requireToken, token, url }) => {
   const headers = {};
   // make sure initalize was called first
-  if (requireToken && token == null) {
+  if (requireToken) {
     if (token == null)
       throw new Error(
         'Please initialize the SDK before calling this function.'

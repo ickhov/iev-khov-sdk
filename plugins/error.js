@@ -9,7 +9,10 @@ export default fp((fastify, opts, done) => {
         error: validation.join(', '),
       };
       reply.status(400).send(response);
-    } else reply.status(500).send(error);
+    } else
+      reply.status(400).send({
+        error: error.message,
+      });
   };
 
   // set the error handler for yup validation
