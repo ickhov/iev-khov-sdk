@@ -3,12 +3,14 @@ import SDK from '../sdk/sdk.js';
 import bookAPI from './book.js';
 import characterAPI from './character.js';
 import movieAPI from './movie.js';
+import quoteAPI from './quote.js';
 import ping from './ping.js';
 import root from './root.js';
 
 const { book, bookChapters } = bookAPI;
 const { movie, movieQuotes } = movieAPI;
 const { character, characterQuotes } = characterAPI;
+const { quote } = quoteAPI;
 
 SDK.initialize({ token: process.env.TOKEN });
 
@@ -44,5 +46,10 @@ export default async (fastify) => {
   );
   fastify.get('/character/:id/quote', { schema }, (request, reply) =>
     characterQuotes(fastify, request, reply)
+  );
+  // QUOTE API
+  fastify.get('/quote', (request, reply) => quote(fastify, request, reply));
+  fastify.get('/quote/:id', { schema }, (request, reply) =>
+    quote(fastify, request, reply)
   );
 };

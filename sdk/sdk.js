@@ -46,6 +46,12 @@ const SDK = {
     }
     return helper({ requireToken: true, token, url });
   },
+  quote: async (id) => {
+    let url = urls.quote;
+    // append the id if any
+    if (id) url = `${url}/${id}`;
+    return helper({ requireToken: true, token, url });
+  },
 };
 
 export default SDK;
