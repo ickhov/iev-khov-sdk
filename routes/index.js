@@ -18,6 +18,12 @@ SDK.initialize({ token: process.env.TOKEN });
 
 const schema = {
   params: Yup.object({ id: Yup.string() }),
+  querystring: Yup.object({
+    limit: Yup.string(),
+    page: Yup.string(),
+    offset: Yup.string(),
+    sort: Yup.string(),
+  }),
 };
 
 export default async (fastify) => {
